@@ -7,7 +7,7 @@ class UserRegisterRequestSchema(BaseUserRequestSchema):
     first_name = fields.String(min_length=2, max_length=20, required=True)
     last_name = fields.String(min_length=2, max_length=20, required=True)
     phone = fields.String(min_length=10, max_length=13, required=True)
-    iban = fields.String(required=True)
+    iban = fields.String(required=True, min_length=22, max_length=22)
 
 
 class UserLoginRequestSchema(BaseUserRequestSchema):
