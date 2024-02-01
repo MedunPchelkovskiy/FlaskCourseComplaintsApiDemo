@@ -80,8 +80,6 @@ class WiseService:
         response = requests.put(url, json={}, headers=self.headers)
         return response
 
-
-
 if __name__ == '__main__':
     wise_service = WiseService()
     wise_service.cancel_transfer(52830240)
