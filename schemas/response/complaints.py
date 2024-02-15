@@ -8,6 +8,7 @@ class CreateComplaintResponseSchema(ComplaintBaseSchema):
     created_on = fields.DateTime(required=True)
     status = fields.Enum(State, by_value=True)
     user_id = fields.Integer(required=True)
+    photo_url = fields.String(required=True)
 
 
 class GetComplaintResponseSchema(CreateComplaintResponseSchema):
